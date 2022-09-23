@@ -1,16 +1,12 @@
-# flutter_application_1
+# Практическая работа 1
 
-A new Flutter project.
+Цель работы: Создать при помощи комплекта средств разработки Flutter три макета.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Ход работы:
+Первый макет был создан при помощи виджетов Flutter: Image, MaterialButton, InkWell, Text, Expanded, Padding, Column и Center.  
+![Макет 1](C:\Users\HerpDerp\Downloads\Новая папка\g1.bmp)
+Второй макет был создан при помощи виджетов Flutter: Image, MaterialButton, Stack, Container, Text, Padding, Column и Center.  
+![Макет 2](C:\Users\HerpDerp\Downloads\Новая папка\g2.bmp)
+Третий макет был создан при помощи виджетов Flutter: Image, MaterialButton, Text, Expanded, InkWell, Padding, Stack, Row, Column и Center.  
+![Макет 3](C:\Users\HerpDerp\Downloads\Новая папка\g3.bmp)
+Вывод: В процессе выполнения данной практической работы были созданы три макета при помощи комплекта средств разработки Flutter.
