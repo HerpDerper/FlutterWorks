@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ThirdScreen extends StatefulWidget {
-  const ThirdScreen({Key? key}) : super(key: key);
+class Medinow extends StatefulWidget {
+  const Medinow({Key? key}) : super(key: key);
 
   @override
-  State<ThirdScreen> createState() => _ThirdScreenState();
+  State<Medinow> createState() => _MedinowState();
 }
 
-class _ThirdScreenState extends State<ThirdScreen> {
+class _MedinowState extends State<Medinow> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

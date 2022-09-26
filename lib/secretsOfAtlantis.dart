@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class FirstScreen extends StatefulWidget {
-  const FirstScreen({Key? key}) : super(key: key);
+class SecretsOfAtlantis extends StatefulWidget {
+  const SecretsOfAtlantis({Key? key}) : super(key: key);
 
   @override
-  State<FirstScreen> createState() => _FirstScreenState();
+  State<SecretsOfAtlantis> createState() => _SecretsOfAtlantisState();
 }
 
-class _FirstScreenState extends State<FirstScreen> {
+class _SecretsOfAtlantisState extends State<SecretsOfAtlantis> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

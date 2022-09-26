@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SecondScreen extends StatefulWidget {
-  const SecondScreen({Key? key}) : super(key: key);
+class MindDeepRelax extends StatefulWidget {
+  const MindDeepRelax({Key? key}) : super(key: key);
 
   @override
-  State<SecondScreen> createState() => _SecondScreenState();
+  State<MindDeepRelax> createState() => _MindDeepRelaxState();
 }
 
-class _SecondScreenState extends State<SecondScreen> {
+class _MindDeepRelaxState extends State<MindDeepRelax> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
