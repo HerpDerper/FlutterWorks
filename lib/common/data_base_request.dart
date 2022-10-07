@@ -2,6 +2,9 @@ abstract class DataBaseRequest {
   /// Таблица Роли
   ///
   /// Поля таблицы: Название роли
+
+  static String deleteTable(String table) => 'drop table $table';
+
   static const String tableRole = 'Role';
 
   /// Таблица Пользователи
