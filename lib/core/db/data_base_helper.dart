@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter_application_1/common/data/model/role.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
@@ -33,6 +34,7 @@ class DataBaseHelper {
     for (var i = 0; i < DataBaseRequest.tableList.length; i++) {
       await db.execute(DataBaseRequest.createTableList[i]);
     }
+    await onInitTable(db);
   }
 
   Future<void> onDropDataBase() async {
@@ -54,5 +56,13 @@ class DataBaseHelper {
     for (var i = 0; i < DataBaseRequest.tableList.length; i++) {
       await db.execute(DataBaseRequest.createTableList[i]);
     }
+    await onInitTable(db);
+  }
+
+  Future<void> onInitTable(Database db) async {
+    try {
+      db.insert(DataBaseRequest.tableRole, Role(role: 'Admin').toMap());
+      db.insert(DataBaseRequest.tableRole, Role(role: 'User').toMap());
+    } on DatabaseException catch (e) {}
   }
 }
