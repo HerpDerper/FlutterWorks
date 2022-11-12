@@ -61,8 +61,8 @@ class DataBaseHelper {
 
   Future<void> onInitTable(Database db) async {
     try {
-      db.insert(DataBaseRequest.tableRole, Role(role: 'Admin').toMap());
-      db.insert(DataBaseRequest.tableRole, Role(role: 'User').toMap());
+      db.insert(DataBaseRequest.tableRole, Role(roleName: 'Admin').toMap());
+      db.insert(DataBaseRequest.tableRole, Role(roleName: 'User').toMap());
     } on DatabaseException catch (e) {}
   }
 }
