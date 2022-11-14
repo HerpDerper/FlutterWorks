@@ -23,7 +23,7 @@
 Пример Entity.\
 ![image](https://user-images.githubusercontent.com/82903497/201571981-1b10e222-91db-4d8b-b717-c568dc2bdba7.png)\
 Создаем класс для создания таблиц в базе данных.\
-![image](https://user-images.githubusercontent.com/82903497/201572002-46f5f3a5-d999-49d5-b3cb-d6481650af56.png)
+![image](https://user-images.githubusercontent.com/82903497/201572002-46f5f3a5-d999-49d5-b3cb-d6481650af56.png)\
 Создаем класс для управления базой данных.\
 Добавляем в него функцию создания таблицы.\
 ![image](https://user-images.githubusercontent.com/82903497/201572024-3bd61a90-bfd9-49a1-9af0-3ab66d7ffa97.png)\
