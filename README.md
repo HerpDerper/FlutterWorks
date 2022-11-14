@@ -10,12 +10,12 @@
 .
 
 Ход работы:\
-Создаем схему базы данных.  
-![image](https://user-images.githubusercontent.com/82903497/201571831-5e79538e-170c-4e48-b09e-11e66a5914b2.png)
+Создаем схему базы данных.\
+![image](https://user-images.githubusercontent.com/82903497/201571831-5e79538e-170c-4e48-b09e-11e66a5914b2.png)\
 Добавляем зависимости.
-![image](https://user-images.githubusercontent.com/82903497/201571856-0f29c1fc-d738-493e-bf10-c1230fcbcd8f.png)
-Создаем модели.  
-![image](https://user-images.githubusercontent.com/82903497/201571903-305a6a28-15be-47ff-b7fd-322a21deb4a6.png)
+![image](https://user-images.githubusercontent.com/82903497/201571856-0f29c1fc-d738-493e-bf10-c1230fcbcd8f.png)\
+Создаем модели.
+![image](https://user-images.githubusercontent.com/82903497/201571903-305a6a28-15be-47ff-b7fd-322a21deb4a6.png)\
 Пример модели.
 ![image](https://user-images.githubusercontent.com/82903497/201571921-f04d2d0f-db14-4823-a526-e938fdeff72a.png)
 Создаем Entities.
