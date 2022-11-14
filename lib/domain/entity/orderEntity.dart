@@ -2,7 +2,7 @@ class OrderEntity {
   late int id;
   final int employeeId;
   final int productId;
-  final DateTime date;
+  final String date;
   final int count;
 
   OrderEntity(
