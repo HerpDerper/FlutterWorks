@@ -20,7 +20,7 @@ class AdminScreenState extends State<AdminScreen> {
               padding: EdgeInsets.fromLTRB(25, 5, 25, 10),
               child: Center(
                 child: Text(
-                  "You are admin!!!",
+                  "You are admin!!!😎😎😎",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
