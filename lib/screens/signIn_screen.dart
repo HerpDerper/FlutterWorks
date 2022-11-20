@@ -37,7 +37,7 @@ class SignInScreenState extends State<SignInScreen> {
                           if (value == null || value.isEmpty) {
                             return "Логин не должен быть пустым";
                           }
-                          if (value.length <= 8) {
+                          if (value.length < 8) {
                             return "Логин должен быть от 8 символов";
                           }
                           if (value.length >= 16) {
@@ -59,7 +59,7 @@ class SignInScreenState extends State<SignInScreen> {
                           if (value == null || value.isEmpty) {
                             return "Пароль не должен быть пустым";
                           }
-                          if (value.length <= 8) {
+                          if (value.length < 8) {
                             return "Пароль должен быть от 8 символов";
                           }
                           if (value.length >= 16) {
