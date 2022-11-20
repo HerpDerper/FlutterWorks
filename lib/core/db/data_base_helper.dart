@@ -9,6 +9,7 @@ import 'package:flutter_application_1/common/data/model/product.dart';
 import 'package:flutter_application_1/common/data/model/productInCellEntity.dart';
 import 'package:flutter_application_1/common/data/model/provider.dart';
 import 'package:flutter_application_1/common/data/model/role.dart';
+import 'package:flutter_application_1/domain/entity/roleEntity.dart';
 import 'package:path/path.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:sqflite/sqflite.dart';
@@ -91,12 +92,12 @@ class DataBaseHelper {
       db.insert(
           DataBaseRequest.tableRole,
           Role(
-            roleName: 'Admin',
+            roleName: RoleEnum.admin.name,
           ).toMap());
       db.insert(
           DataBaseRequest.tableRole,
           Role(
-            roleName: 'User',
+            roleName: RoleEnum.user.name,
           ).toMap());
 
       db.insert(
@@ -104,7 +105,7 @@ class DataBaseHelper {
           Account(
             login: 'login',
             password: 'password',
-            roleId: 1,
+            roleId: RoleEnum.admin.id,
           ).toMap());
 
       db.insert(

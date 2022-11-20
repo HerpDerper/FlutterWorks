@@ -1,3 +1,5 @@
+import 'package:flutter_application_1/domain/entity/roleEntity.dart';
+
 class AccountEntity {
   late int id;
   final String login;

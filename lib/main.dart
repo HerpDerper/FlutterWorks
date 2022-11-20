@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/db/data_base_helper.dart';
+import 'package:flutter_application_1/screens/signIn_screen.dart';
+import 'package:flutter_application_1/screens/signUp_screen.dart';
 
 void main() => runApp(const App());
 
@@ -11,6 +13,10 @@ class App extends StatelessWidget {
     DataBaseHelper dataBaseHelper = DataBaseHelper.instance;
     dataBaseHelper.init();
     return const MaterialApp(
+      // home: SignInScreen(),
+      home: SignUpScreen(),
+      //home: UserSceen(),
+      //home: AdminSceen(),
       debugShowCheckedModeBanner: false,
     );
   }

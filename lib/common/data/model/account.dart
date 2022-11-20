@@ -1,4 +1,5 @@
 import 'package:flutter_application_1/domain/entity/accountEntity.dart';
+import 'package:flutter_application_1/domain/entity/roleEntity.dart';
 
 class Account extends AccountEntity {
   late int id;
