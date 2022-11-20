@@ -31,10 +31,14 @@ class AdminScreenState extends State<AdminScreen> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SignInScreen()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SignInScreen(),
+                  ),
+                );
               },
-              child: const Text("Зарегистрироваться"),
+              child: const Text("Назад"),
             ),
           ],
         ),

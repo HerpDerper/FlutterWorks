@@ -1,5 +1,7 @@
+import 'dart:convert';
 import 'dart:io';
 
+import 'package:crypto/crypto.dart';
 import 'package:flutter_application_1/common/data/model/account.dart';
 import 'package:flutter_application_1/common/data/model/category.dart';
 import 'package:flutter_application_1/common/data/model/cell.dart';
@@ -103,8 +105,8 @@ class DataBaseHelper {
       db.insert(
           DataBaseRequest.tableAccount,
           Account(
-            login: 'login',
-            password: 'password',
+            login: 'loginAdmin',
+            password: md5.convert(utf8.encode('password')).toString(),
             roleId: RoleEnum.admin.id,
           ).toMap());
 

@@ -32,7 +32,7 @@ class SignInScreenState extends State<SignInScreen> {
                   child: Column(
                     children: [
                       TextFormField(
-                        controller: controllerPassword,
+                        controller: controllerLogin,
                         validator: ((value) {
                           if (value == null || value.isEmpty) {
                             return "Логин не должен быть пустым";
@@ -54,7 +54,7 @@ class SignInScreenState extends State<SignInScreen> {
                         padding: EdgeInsets.fromLTRB(25, 5, 25, 20),
                       ),
                       TextFormField(
-                        controller: controllerLogin,
+                        controller: controllerPassword,
                         validator: ((value) {
                           if (value == null || value.isEmpty) {
                             return "Пароль не должен быть пустым";
@@ -84,6 +84,7 @@ class SignInScreenState extends State<SignInScreen> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
+                        if (!key.currentState!.validate()) return;
                         final snackBar = SnackBar(
                           content: Text('Ошибка'),
                         );
@@ -129,9 +130,11 @@ class SignInScreenState extends State<SignInScreen> {
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => SignUpScreen()));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SignUpScreen(),
+                          ),
+                        );
                       },
                       child: const Text("Зарегистрироваться"),
                     ),

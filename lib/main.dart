@@ -13,10 +13,7 @@ class App extends StatelessWidget {
     DataBaseHelper dataBaseHelper = DataBaseHelper.instance;
     dataBaseHelper.init();
     return const MaterialApp(
-      // home: SignInScreen(),
-      home: SignUpScreen(),
-      //home: UserSceen(),
-      //home: AdminSceen(),
+      home: SignInScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

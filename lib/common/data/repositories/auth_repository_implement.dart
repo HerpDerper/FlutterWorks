@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:crypto/crypto.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_application_1/common/data/model/account.dart';
 import 'package:flutter_application_1/common/data_base_request.dart';
@@ -23,7 +26,8 @@ class AuthRepositoryImplementation implements AuthRepository {
       if (account.isEmpty) {
         return const Left('Такого пользователя нет');
       }
-      if (account.first['password'] != password) {
+      if (account.first['password'] !=
+          md5.convert(utf8.encode(password)).toString()) {
         return const Left('Пароль пользователя неверный');
       }
       return Right(RoleEnum.values[(account.first['roleId'] as int) - 1]);
@@ -35,9 +39,20 @@ class AuthRepositoryImplementation implements AuthRepository {
   @override
   Future<Either<String, bool>> signUp(String login, String password) async {
     try {
+      var account = await _db.query(
+        table,
+        where: 'login = ?',
+        whereArgs: [login],
+      );
+      if (account.isNotEmpty) {
+        return const Left('Логин уже занят');
+      }
       _db.insert(
           table,
-          Account(login: login, password: password, roleId: RoleEnum.user.id)
+          Account(
+                  login: login,
+                  password: md5.convert(utf8.encode(password)).toString(),
+                  roleId: RoleEnum.user.id)
               .toMap());
       return const Right(true);
     } on DatabaseException catch (error) {

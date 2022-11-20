@@ -17,7 +17,7 @@ class SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(179, 99, 219, 179),
+      backgroundColor: const Color.fromARGB(179, 113, 219, 99),
       body: Center(
         child: Column(
           children: [
@@ -29,7 +29,7 @@ class SignUpScreenState extends State<SignUpScreen> {
                   child: Column(
                     children: [
                       TextFormField(
-                        controller: controllerPassword,
+                        controller: controllerLogin,
                         validator: ((value) {
                           if (value == null || value.isEmpty) {
                             return "Логин не должен быть пустым";
@@ -51,7 +51,7 @@ class SignUpScreenState extends State<SignUpScreen> {
                         padding: EdgeInsets.fromLTRB(25, 5, 25, 20),
                       ),
                       TextFormField(
-                        controller: controllerLogin,
+                        controller: controllerPassword,
                         validator: ((value) {
                           if (value == null || value.isEmpty) {
                             return "Пароль не должен быть пустым";
@@ -81,27 +81,33 @@ class SignUpScreenState extends State<SignUpScreen> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        final snackBar = SnackBar(
-                          content: Text('Ошибка'),
-                        );
-                        key.currentState!.validate();
+                        if (!key.currentState!.validate()) return;
                         var user = new AuthRepositoryImplementation().signUp(
                           controllerLogin.text,
                           controllerPassword.text,
                         );
-                        user.then((value) {
-                          if (value.isLeft()) {
-                            ScaffoldMessenger.of(context)
-                                .showSnackBar(snackBar);
-                          } else {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => SignInScreen(),
-                              ),
-                            );
-                          }
-                        });
+                        user.then(
+                          (value) {
+                            if (value.isRight()) {
+                              AuthRepositoryImplementation().signUp(
+                                controllerLogin.text,
+                                controllerPassword.text,
+                              );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const SignInScreen(),
+                                ),
+                              );
+                            } else {
+                              final snackBar = const SnackBar(
+                                content: Text('Ошибка'),
+                              );
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(snackBar);
+                            }
+                          },
+                        );
                       },
                       child: const Text("Зарегистрироваться"),
                     ),
@@ -111,9 +117,11 @@ class SignUpScreenState extends State<SignUpScreen> {
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => SignInScreen()));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SignInScreen(),
+                          ),
+                        );
                       },
                       child: const Text("Назад"),
                     ),
