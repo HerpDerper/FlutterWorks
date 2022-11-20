@@ -35,10 +35,10 @@ class SignUpScreenState extends State<SignUpScreen> {
                             return "Логин не должен быть пустым";
                           }
                           if (value.length <= 8) {
-                            return "Логин должен быть от 8";
+                            return "Логин должен быть от 8 символов";
                           }
                           if (value.length >= 16) {
-                            return "Логин должен быть до 16";
+                            return "Логин должен быть до 16 символов";
                           }
                           return null;
                         }),
@@ -57,10 +57,10 @@ class SignUpScreenState extends State<SignUpScreen> {
                             return "Пароль не должен быть пустым";
                           }
                           if (value.length <= 8) {
-                            return "Пароль должен быть от 8";
+                            return "Пароль должен быть от 8 символов";
                           }
                           if (value.length >= 16) {
-                            return "Пароль должен быть до 16";
+                            return "Пароль должен быть до 16 символов";
                           }
                           return null;
                         }),
