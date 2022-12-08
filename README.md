@@ -6,7 +6,7 @@
 Создаем класс CounterState для счетчика.\
 ![image](https://user-images.githubusercontent.com/82903497/206401335-07027528-eee5-4a95-9ab7-0fc1dd639e05.png)\
 Создаем класс CounterCubit для изменения счетчика.\
-![image](https://user-images.githubusercontent.com/82903497/206401406-23768f1f-c55d-4166-b462-a9320c6efd43.png)
+![image](https://user-images.githubusercontent.com/82903497/206401406-23768f1f-c55d-4166-b462-a9320c6efd43.png)\
 Создаем кнопки для изменения счетчика.\
 ![image](https://user-images.githubusercontent.com/82903497/206401436-ac113d4e-8563-4416-bf9e-8aff42492323.png)\
 Создаем новый класс ThemeState для темы.\
